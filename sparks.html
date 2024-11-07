@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <link rel=”icon” href=”img/logo.png”>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkS - Modern Background Music Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .fontnew {
+            font-family: 'Great Vibes', cursive;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-pink-400 to-blue-300 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">SparkS</h1>
+            <nav class="flex items-center space-x-6">
+                <span class="md:hidden cursor-pointer text-2xl" onclick="toggleMenu()">&#9776;</span>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#home" class="hover:opacity-75">Home</a></li>
+                    <li><a href="#about" class="hover:opacity-75">About</a></li>
+                    <li><a href="#services" class="hover:opacity-75">Services</a></li>
+                    <li><a href="#contact" class="hover:opacity-75">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen bg-gradient-to-b from-blue-300 to-pink-400 flex flex-col justify-center items-center text-center px-4">
+        <h2 class="text-5xl font-semibold text-white mb-4">SparkS</h2>
+        <p class="text-lg text-white mb-6">Make your own harmony</p>
+        <a href="#about" class="bg-pink-400 hover:bg-pink-500 text-white py-3 px-6 rounded-full transition">Start here</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 text-center bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold mb-4">About SparkS</h2>
+            <p class="max-w-3xl mx-auto mb-6">SparkS adalah tempat dimana kalian bisa membuat background music secara bebas dan leluasa. Kalian bisa memakai BGM tanpa harus menngeluhkan tentang pelanggaran Hak cipta atau copyright karena musik yang kalian gunakan adalah hasil dari kreasi kalian sendiri.</p>
+            <button class="bg-pink-400 hover:bg-pink-500 text-white py-2 px-6 rounded-full transition" onclick="showPopup()">Read More</button>
+        </div>
+    </section>
+
+    <!-- Pop-Up Modal -->
+    <div id="popup-modal" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg max-w-md mx-auto">
+            <h3 class="text-2xl font-semibold mb-4">More About Us</h3>
+            <p class="mb-4">We provide youth-centric, trendy, and fresh designs that connect with the younger audience.</p>
+            <button class="bg-pink-400 hover:bg-pink-500 text-white py-2 px-6 rounded-full transition" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold mb-10">Our Cool Services</h2>
+            <div class="grid gap-10 md:grid-cols-3">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="fas fa-laptop-code text-5xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Arrangement</h3>
+                    <p>Hasilkan musik yang lebih unik dan baru dengan menggabungkan berbagai macam komponen musik.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="fas fa-paint-brush text-5xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Consult</h3>
+                    <p>konsultasikan musik latar belakang yang ingin anda buat dengan tim kami. </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="fas fa-music text-5xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Custom BGM</h3>
+                    <p>Buat musik latar belakang yang lebih sederhana dan fleksibel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricelist Section Start-->
+    <section class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold mb-10">Paket Harga</h2>
+            <div class="grid gap-8 md:grid-cols-4 sm:grid-cols-2">
+                <!-- Basic Package Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <h3 class="fontnew text-xl font-semibold mb-4">Sunny</h3>
+                    <p class="text-3xl font-bold text-gray-900 mb-1">Rp 25.000 - 75.000</p>
+                    <p class="text-gray-500 mb-4">/proyek</p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2 text-left">
+                        <li><i class="fas fa-check text-green-500"></i> BGM sederhana untuk konten video atau podcast</li>
+                        <li><i class="fas fa-check text-green-500"></i> Durasi maksimal 1 menit</li>
+                        <li><i class="fas fa-check text-green-500"></i> Musik yang cocok untuk latar belakang statis</li>
+                        <li><i class="fas fa-check text-green-500"></i> 2 Revisi</li>
+                        <li><i class="fas fa-check text-green-500"></i> Dukungan Dasar (via email)</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a href="#" class="bg-pink-400 hover:bg-pink-500 text-white py-2 px-6 rounded-full transition">Pilih Paket</a>
+                    </div>
+                </div>
+                
+                <!-- Standard Package Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <h3 class="fontnew text-xl font-semibold mb-4">Windy</h3>
+                    <p class="text-3xl font-bold text-gray-900 mb-1">Rp 76.000 - 150.000</p>
+                    <p class="text-gray-500 mb-4">/proyek</p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2 text-left">
+                        <li><i class="fas fa-check text-green-500"></i> BGM custom dengan tema pilihan</li>
+                        <li><i class="fas fa-check text-green-500"></i> Durasi maksimal 2 menit</li>
+                        <li><i class="fas fa-check text-green-500"></i> Fitur musik standar (misalnya loopable, variasi instrumen)</li>
+                        <li><i class="fas fa-check text-green-500"></i> 3 Revisi</li>
+                        <li><i class="fas fa-check text-green-500"></i> Dukungan Standar (via email & chat)</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a href="#" class="bg-pink-400 hover:bg-pink-500 text-white py-2 px-6 rounded-full transition">Pilih Paket</a>
+                    </div>
+                </div>
+                
+                <!-- Premium Package Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <h3 class="fontnew text-xl font-semibold mb-4">Rainy</h3>
+                    <p class="text-3xl font-bold text-gray-900 mb-1">Rp 151.000 - 225.000</p>
+                    <p class="text-gray-500 mb-4">/proyek</p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2 text-left">
+                        <li><i class="fas fa-check text-green-500"></i> BGM premium dengan instrumen dan elemen suara</li>
+                        <li><i class="fas fa-check text-green-500"></i> Durasi maksimal 3 menit</li>
+                        <li><i class="fas fa-check text-green-500"></i> Kualitas suara tinggi</li>
+                        <li><i class="fas fa-check text-green-500"></i> 5 Revisi</li>
+                        <li><i class="fas fa-check text-green-500"></i> Dukungan Premium (via email, chat & telepon)</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a href="#" class="bg-pink-400 hover:bg-pink-500 text-white py-2 px-6 rounded-full transition">Pilih Paket</a>
+                    </div>
+                </div>
+
+                <!-- Custom Package Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <h3 class="fontnew text-xl font-semibold mb-4">Stormy</h3>
+                    <p class="text-3xl font-bold text-gray-900 mb-1">Rp 226.000 - 350.000</p>
+                    <p class="text-gray-500 mb-4">/proyek</p>
+                    <ul class="text-sm text-gray-600 mb-6 space-y-2 text-left">
+                        <li><i class="fas fa-check text-green-500"></i> BGM sesuai permintaan dengan instrumen pilihan</li>
+                        <li><i class="fas fa-check text-green-500"></i> Durasi tanpa batas</li>
+                        <li><i class="fas fa-check text-green-500"></i> Kualitas suara tinggi & mastering profesional</li>
+                        <li><i class="fas fa-check text-green-500"></i> Revisi tanpa batas</li>
+                        <li><i class="fas fa-check text-green-500"></i> Dukungan Khusus (via email, chat & telepon)</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a href="#" class="bg-pink-400 hover:bg-pink-500 text-white py-2 px-6 rounded-full transition">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricelist Section End -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
+            <form class="max-w-lg mx-auto">
+                <input type="text" placeholder="Your Name" class="border p-2 rounded mb-4 w-full" required>
+                <input type="email" placeholder="Your Email" class="border p-2 rounded mb-4 w-full" required>
+                <textarea placeholder="Your Message" class="border p-2 rounded mb-4 w-full" required></textarea>
+                <button type="submit" class="bg-pink-400 hover:bg-pink-500 text-white py-2 px-6 rounded-full transition">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-pink-400 to-blue-300 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 SparkS. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup-modal').classList.remove('hidden');
+        }
+
+        function closePopup() {
+            document.getElementById('popup-modal').classList.add('hidden');
+        }
+
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
